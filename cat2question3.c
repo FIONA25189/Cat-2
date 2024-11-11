@@ -23,8 +23,8 @@ int main (){
    
    grosspay = hours_worked*hourly_wage;
    
-   if (grosspay<=600){taxpay=0.15;}
-   else if (grosspay>=600){taxpay=0.20;}
+   if (grosspay<=600){taxpay=0.15*grosspay;}
+   else if (grosspay>=600){taxpay=0.20*grosspay;}
    else{printf("No tax paid\n");}
    
    netpay=grosspay-taxpay;
