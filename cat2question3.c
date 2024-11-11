@@ -17,16 +17,17 @@ int main (){
   
   overtime=hours_worked-40;
   
-   if(hours_worked>=40){printf("overtime!\n");}
-   else if(hours_worked<=40){printf("No overtime!!\n");}
+   if(hours_worked>40){
+     grosspay=(hourly_wage*40)+((hours_worked-40)*hourly_wage*0.5);
+     printf("overtime!\n");}
+   else if(hours_worked<=40){grosspay=(hours_worked*hourly_wage);
+     printf("No overtime!!\n");}
    else {printf("No work done!!\n");}
    
-   grosspay = hours_worked*hourly_wage;
    
    if (grosspay<=600){taxpay=0.15*grosspay;}
-   else if {taxpay=(600*0.15)+(grosspay-600)*0.20);}
-   else{printf("No tax paid\n");}
-   
+   else {taxpay=(600*0.15)+(grosspay-600)*0.20);}
+  
    netpay=grosspay-taxpay;
    
    printf("The grosspay is %f\n",grosspay);
